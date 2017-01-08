@@ -1,0 +1,30 @@
+.ios, .md {
+
+	page-home {
+
+		ion-item-sliding {
+			margin-bottom: 10px;
+			width: 96%;
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+
+		ion-item {
+			background-color: #fff;
+			padding-left: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			h6 {
+				font-weight: bold;
+			}
+		}
+
+		ion-item-options button {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
+
+	}
+
+}

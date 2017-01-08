@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary" transparent>
+    <ion-title>Finished</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<p>Nice work! You've finished working on this project for now.</p>
+
+	<p>Below is the time that you have spent working on this project this session. <strong>If this is correct, you can leave it as it is.</strong></p> 
+
+	<p>If you forgot to turn off the timer, or spent a little too long on YouTube, you can edit the time below before saving.</p>
+
+	<ion-list no-lines>
+
+		<ion-item>
+			<ion-label text-right>Hours: </ion-label>
+			<ion-input [(ngModel)]="hours" type="tel"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label text-right>Minutes: </ion-label>
+			<ion-input [(ngModel)]="minutes" type="tel"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label text-right>Seconds: </ion-label>
+			<ion-input [(ngModel)]="seconds" type="tel"></ion-input>
+		</ion-item>
+
+	</ion-list>	
+
+</ion-content>
+
+<ion-footer>
+	<button color="light" outline ion-button (click)="submitTime()">Save Time</button>
+</ion-footer>

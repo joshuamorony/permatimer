@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary" transparent>
+    <ion-title>
+      <img src="assets/images/logo.png" />
+    </ion-title>
+    <ion-buttons end>
+    	<button ion-button icon-only (click)="newProject()"><ion-icon name="add"></ion-icon></button>
+	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-list no-lines reorder="true" (ionItemReorder)="projectsService.reorder($event)">
+
+		<ion-item-sliding (click)="toggleTimer(project)" *ngFor="let project of projectsService.projects">
+
+			<ion-item>
+				<ion-spinner *ngIf="project.active" name="bubbles" item-left></ion-spinner>
+				<h6>{{project.name}}</h6>
+				<p>{{project.totalSeconds | hoursMinutesSeconds}}</p>
+			</ion-item>
+
+			<ion-item-options side="right">
+				<button color="light" ion-button icon-only (click)="editProject(project)">
+					<ion-icon name="settings"></ion-icon>
+				</button>
+				<button color="danger" ion-button icon-only (click)="projectsService.removeProject(project)">
+					<ion-icon name="trash"></ion-icon>
+				</button>
+			</ion-item-options>
+		</ion-item-sliding>
+
+	</ion-list>
+
+</ion-content>

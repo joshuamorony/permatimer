@@ -1,0 +1,37 @@
+.ios, .md {
+
+	page-stop-timing {
+
+		ion-footer {
+			text-align: center;
+		}
+
+		ion-footer button {
+			width: 96%;
+		}
+
+		ion-item {
+
+			padding-top: 5px;
+			padding-bottom: 5px;
+
+			ion-label {
+				width: 30%;
+				color: #fff;
+				font-weight: bold;
+			}
+
+		}
+
+		ion-input {
+			background-color: map-get($colors, light);
+		}
+
+		p {
+			color: #fff;
+			text-align: center;
+		}
+
+	}
+
+}
